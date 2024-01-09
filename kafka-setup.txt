@@ -1,0 +1,24 @@
+# Open the server.properties file for editing
+nano config/server.properties
+
+# Update the advertised.listeners property with your server's IP address
+advertised.listeners=PLAINTEXT://<your-server-ip>:9092
+
+# Start Zookeeper (run in a separate terminal or background process)
+./bin/zookeeper-server-start.sh config/zookeeper.properties
+
+# Start the Kafka broker (run in a new terminal)
+./bin/kafka-server-start.sh config/server.properties
+
+# Create a Kafka topic (replace my-topic with your desired topic name)
+./bin/kafka-topics.sh --create --topic reddit-topic --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+
+#list topics
+./bin/kafka-topics.sh --bootstrap-server localhost:9092 --list
+
+# Start a producer to send messages to the topic
+./bin/kafka-console-producer.sh --topic reddit-topic --bootstrap-server localhost:9092
+
+# Start a consumer to receive messages
+./bin/kafka-console-consumer.sh --topic reddit-topic --bootstrap-server localhost:9092 --from-beginning
+

@@ -1,0 +1,11 @@
+# Ignore configuration files with sensitive information
+reddit.config
+test.py
+kafak-setup.txt
+kafka-to-beam.py
+bq-schema.json
+creating_csv_spark_streaming_app.py
+final_spark_streaming_app.py
+spark-streaming-app.py
+spark-install.sh
+deploy-kafka-server.sh
