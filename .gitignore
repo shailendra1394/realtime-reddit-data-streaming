@@ -1,7 +1,7 @@
 # Ignore configuration files with sensitive information
 reddit.config
 test.py
-kafaka-setup.txt
+kafka-setup.txt
 kafka-to-beam.py
 bq-schema.json
 creating_csv_spark_streaming_app.py
