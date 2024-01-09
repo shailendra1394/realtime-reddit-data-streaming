@@ -1,24 +1,29 @@
-# E2E realtime-reddit-data-streaming
-This project streams data from Reddit using python PRAW library, publishes it to Kafka, and processes it in real-time with Spark Structured Streaming.
+# E2E Realtime Data Streaming Project
 
-# Overview
+## Overview
+
 This project implements an end-to-end (E2E) real-time data streaming solution using Apache Kafka, Apache Spark Structured Streaming, and Google BigQuery. The project involves data ingestion, stream processing, and data storage.
 
-## 1. Data Ingestion:
-Utilize Apache Kafka for real-time data ingestion.
-Producers publish data to Kafka topics, and Beam will consume these topics.
+### 1. Data Ingestion:
 
-## 2. Stream Processing with Apache Spark Structured Streaming:
-Developed Apache Spark Structured Streaming pipelines in Python to perform real-time processing.
+- Utilized Apache Kafka for real-time data ingestion.
+- Producers(reddit-to-kafka.py) publishes data to Kafka topic, and spark will consume these topic.
 
-## 3. Data Storage:
-Leveraging the "pandas_gbq" library.
-Store the processed data in Google BigQuery.
+### 2. Stream Processing with Apache Spark Structured Streaming:
 
-# Project Setup Instructions
+- Developed Apache Spark Structured Streaming pipelines in Python to perform real-time processing.
+
+### 3. Data Storage:
+
+- Leveraging the "pandas_gbq" library.
+- Stored the processed data in a Google BigQuery table.
+
+## Project Setup Instructions
+
 Follow these steps to set up and run the Reddit-to-Kafka and Spark Streaming applications.
 
-## Prerequisites:
-Python installed with required dependencies on your machine.
-Apache Kafka installed and running locally.
-Apache Spark installed and configured.
+### Prerequisites:
+
+- Python installed on your machine.
+- Apache Kafka installed and running locally.
+- Apache Spark installed and configured.
