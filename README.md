@@ -7,7 +7,7 @@ This project implements an end-to-end (E2E) real-time data streaming solution us
 ### 1. Data Ingestion:
 
 - Utilized Apache Kafka for real-time data ingestion.
-- Producers(reddit-to-kafka.py) publishes data to Kafka topic, and spark will consume these topic.
+- Producers(reddit-to-kafka.py) publishes data to a Kafka topic, and spark will consume this topic.
 
 ### 2. Stream Processing with Apache Spark Structured Streaming:
 
