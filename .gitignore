@@ -9,4 +9,3 @@ final_spark_streaming_app.py
 spark-streaming-app.py
 spark-install.sh
 deploy-kafka-server.sh
-bq-batch-load.py

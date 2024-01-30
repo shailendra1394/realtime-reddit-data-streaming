@@ -7,10 +7,10 @@ from pandas_gbq import to_gbq
 spark = SparkSession.builder.appName("BQBatchLoad").getOrCreate()
 
 # Load date
-date = '2024-01-03'
+date = '2024-01-09'
 
 # BigQuery settings
-project_id = "qwiklabs-gcp-03-96b39f52c439"
+project_id = "qwiklabs-gcp-03-ef4725bd7b7b"
 dataset_id = "my_dataset"
 table_id = "reddit_world_news"
 
@@ -22,7 +22,7 @@ schema = StructType([
     StructField("created_utc", DoubleType(), True)
 ])
 
-csv_files_path = f'/home/student-04-7e89803ee339/spark_output/date={date}/'
+csv_files_path = f'/home/student-04-56c483706573/spark_output/date={date}/'
 
 csv_files = [f for f in listdir(csv_files_path) if isfile(join(csv_files_path, f)) and f.endswith('.csv')]
 
