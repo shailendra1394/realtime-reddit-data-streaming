@@ -33,7 +33,7 @@ producer = KafkaProducer(bootstrap_servers=kafka_bootstrap_servers,
 
 # streaming Reddit data and publishing to Kafka
 try:
-    subreddit = reddit.subreddit('worldnews')  # Replace 'my_subreddit' with the subreddit you're interested in
+    subreddit = reddit.subreddit('worldnews')
 
     for submission in subreddit.stream.submissions():
         message = {
